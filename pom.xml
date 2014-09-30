@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>hal-browser</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>HAL Browser</name>
     <description>WebJar for HAL Browser</description>
     <url>http://webjars.org</url>
@@ -43,7 +43,7 @@
         <url>https://github.com/Coena/hal-browser-webjar</url>
         <connection>scm:git:git@github.com:Coena/hal-browser-webjar.git</connection>
         <developerConnection>scm:git:git@github.com:Coena/hal-browser-webjar.git</developerConnection>
-        <tag>v0.0.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
