@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>hal-browser</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>HAL Browser</name>
     <description>WebJar for HAL Browser</description>
     <url>http://webjars.org</url>
