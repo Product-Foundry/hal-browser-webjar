@@ -42,8 +42,8 @@
 
     <scm>
         <url>https://github.com/webjars/hal-browser</url>
-        <connection>scm:git:git@github.com:webjars/hal-browser.git</connection>
-        <developerConnection>scm:git:git@github.com:webjars/hal-browser.git</developerConnection>
+        <connection>scm:git:https://github.com/webjars/hal-browser.git</connection>
+        <developerConnection>scm:git:https://github.com/webjars/hal-browser.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
