@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>hal-browser</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>b7669f1-SNAPSHOT</version>
     <name>HAL Browser</name>
     <description>WebJar for HAL Browser</description>
     <url>http://webjars.org</url>
@@ -41,22 +41,11 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/Coena/hal-browser-webjar</url>
-        <connection>scm:git:git@github.com:Coena/hal-browser-webjar.git</connection>
-        <developerConnection>scm:git:git@github.com:Coena/hal-browser-webjar.git</developerConnection>
-        <tag>v0.0.2</tag>
+        <url>https://github.com/webjars/hal-browser</url>
+        <connection>scm:git:git@github.com:webjars/hal-browser.git</connection>
+        <developerConnection>scm:git:git@github.com:webjars/hal-browser.git</developerConnection>
+        <tag>HEAD</tag>
     </scm>
-
-    <distributionManagement>
-        <repository>
-            <id>bintray</id>
-            <name>hal-browser-webjar</name>
-            <url>https://api.bintray.com/productfoundry/maven/hal-browser-webjar</url>
-        </repository>
-    </distributionManagement>
-
-    <dependencies>
-    </dependencies>
 
     <build>
         <plugins>
@@ -78,7 +67,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/hal-browser-${upstream.version}" />
+                                    <fileset dir="${project.build.directory}/hal-browser-${upstream.version}" excludes="vendor/"/>
                                 </move>
                             </target>
                         </configuration>
@@ -87,13 +76,20 @@
             </plugin>
 
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5</version>
+                <version>2.5.1</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.5</version>
+                <extensions>true</extensions>
                 <configuration>
-                    <arguments>-Dgpg.skip=true</arguments>
-                    <useReleaseProfile>false</useReleaseProfile>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <tagNameFormat>v${project.version}</tagNameFormat>
+                    <serverId>sonatype-nexus-staging</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
         </plugins>
