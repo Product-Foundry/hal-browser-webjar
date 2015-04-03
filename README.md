@@ -2,7 +2,7 @@ WebJar for HAL Browser
 
 More info: http://webjars.org
 
-Upstream: https://github.com/Coena/hal-browser
+Upstream: https://github.com/mikekelly/hal-browser
 
 Update `upstream.version` in `pom.xml` to specify the hal-browser version.
 
